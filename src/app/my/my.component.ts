@@ -9,10 +9,7 @@ import { Component, OnInit } from '@angular/core';
   `,
   styles : [
     `
-      h1 {
-        border : 1px solid red;
-      }
-    `
+    ` 
   ]
 })
 export class MyComponent implements OnInit {
