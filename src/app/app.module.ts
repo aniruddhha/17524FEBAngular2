@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { MyComponent } from './my/my.component';
 import { LoginComponent } from './login/login.component';
 import { ThinComponent } from './login/thin.component';
+import { DatabindingComponent } from './databinding/databinding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyComponent,
     LoginComponent,
-    ThinComponent
+    ThinComponent,
+    DatabindingComponent
   ],
   imports: [
     BrowserModule,
