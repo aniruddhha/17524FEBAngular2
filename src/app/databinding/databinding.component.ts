@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
-
+// ng build --env=prod
 @Component({
-  selector: 'app-databinding',
-  templateUrl: './databinding.component.html',
-  styleUrls: ['./databinding.component.css']
+    selector: 'app-databinding',
+    templateUrl: './databinding.component.html',
+    styleUrls: ['./databinding.component.css']
 })
-export class DatabindingComponent  {
+export class DatabindingComponent {
 
-  myName: string;
+    myName: string;
+    btnOkay = 'Okay';
 
-  constructor() {
-    this.myName = 'codekul.com'
-  }
+    constructor() {
+        this.myName = 'codekul.com'
+    }
 
-  cube(num : number) : number {
-    return num*num*num;
-  }
+    cube(num: number): number {
+        return num * num * num;
+    }
 }

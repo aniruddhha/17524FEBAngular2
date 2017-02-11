@@ -8,6 +8,7 @@ import { MyComponent } from './my/my.component';
 import { LoginComponent } from './login/login.component';
 import { ThinComponent } from './login/thin.component';
 import { DatabindingComponent } from './databinding/databinding.component';
+import { PropertyBindingComponent } from './databinding/property-binding.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DatabindingComponent } from './databinding/databinding.component';
     MyComponent,
     LoginComponent,
     ThinComponent,
-    DatabindingComponent
+    DatabindingComponent,
+    PropertyBindingComponent
   ],
   imports: [
     BrowserModule,
