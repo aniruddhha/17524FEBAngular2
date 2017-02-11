@@ -4,7 +4,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  encapsulation : ViewEncapsulation.Native
+  encapsulation : ViewEncapsulation.Emulated
 })
 export class AppComponent {
   title = 'app works!';
