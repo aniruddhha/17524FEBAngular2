@@ -5,11 +5,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { MyComponent } from './my/my.component';
+import { LoginComponent } from './login/login.component';
+import { ThinComponent } from './login/thin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyComponent
+    MyComponent,
+    LoginComponent,
+    ThinComponent
   ],
   imports: [
     BrowserModule,
