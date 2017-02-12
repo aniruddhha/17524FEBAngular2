@@ -1,3 +1,4 @@
+import { async } from '@angular/core/testing';
 import { Component } from '@angular/core';
 // ng build --env=prod
 @Component({
