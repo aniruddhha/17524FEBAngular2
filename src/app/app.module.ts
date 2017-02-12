@@ -11,6 +11,7 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { PropertyBindingComponent } from './databinding/property-binding.component';
 import { BlenderComponent } from './databinding/blender.component';
 import { EventBindingComponent } from './databinding/event-binding.component';
+import { MouseComponent } from './databinding/mouse.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EventBindingComponent } from './databinding/event-binding.component';
     DatabindingComponent,
     PropertyBindingComponent,
     BlenderComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    MouseComponent
   ],
   imports: [
     BrowserModule,

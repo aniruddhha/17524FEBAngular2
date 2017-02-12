@@ -11,3 +11,10 @@
   <font [size]="fntSiz">Well this is, Well </font>;
 </div>
 
+<div [ngClass]="{well : isWell}">
+  isWell
+</div>
+<div>
+  <mouse (clk)="isWell = !isWell"></mouse>
+</div>
+

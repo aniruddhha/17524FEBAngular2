@@ -9,7 +9,6 @@ export class EventBindingComponent implements OnInit {
 
   color: string;
   fntSiz : number = 3;
-
   constructor() { }
 
   ngOnInit() {
