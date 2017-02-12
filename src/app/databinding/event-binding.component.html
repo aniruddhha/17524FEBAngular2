@@ -1,3 +1,13 @@
-<p>
-  event-binding works!
-</p>
+<h1 [style.color]="color">
+  Event Binding
+</h1>
+<hr>
+
+<div>
+  <input type="button" value="Red" class= "btn btn-primary" (click)="btnClick('red')" /> <input type="button" value="Blue" class= "btn btn-primary" (click)="btnClick('blue')" />  
+</div>
+
+<div class="well" (mouseenter)="enlarge()" (mouseleave)="crunch()">
+  <font [size]="fntSiz">Well this is, Well </font>;
+</div>
+
