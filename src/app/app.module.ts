@@ -12,6 +12,10 @@ import { PropertyBindingComponent } from './databinding/property-binding.compone
 import { BlenderComponent } from './databinding/blender.component';
 import { EventBindingComponent } from './databinding/event-binding.component';
 import { MouseComponent } from './databinding/mouse.component';
+import { FirstProjModComponent } from './first-proj-mod/first-proj-mod.component';
+import { VehicleSelectionComponent } from './first-proj-mod/vehicle-selection.component';
+import { ImagePresenterComponent } from './first-proj-mod/image-presenter.component';
+import { FooterComponent } from './first-proj-mod/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { MouseComponent } from './databinding/mouse.component';
     PropertyBindingComponent,
     BlenderComponent,
     EventBindingComponent,
-    MouseComponent
+    MouseComponent,
+    FirstProjModComponent,
+    VehicleSelectionComponent,
+    ImagePresenterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
