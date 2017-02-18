@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoreOnComponent implements OnInit {
 
+  city: string;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  makeUpper(city: string) {
+    this.city = city.toUpperCase();
   }
 
 }

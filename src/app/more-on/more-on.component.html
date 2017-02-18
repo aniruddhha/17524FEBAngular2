@@ -16,3 +16,10 @@
     <input type="button" value="okay" class="btn btn-primary">
   </app-ng-content>
 </div>
+
+<div>
+  <h1>Local References</h1>
+  <hr>
+
+  <input type="text" #mCity [value]="city"> <input class="btn btn-primary" type="button" value="Uppecase" (click)="makeUpper(mCity.value)">
+</div>
