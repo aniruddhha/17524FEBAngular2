@@ -16,6 +16,8 @@ import { FirstProjModComponent } from './first-proj-mod/first-proj-mod.component
 import { VehicleSelectionComponent } from './first-proj-mod/vehicle-selection.component';
 import { ImagePresenterComponent } from './first-proj-mod/image-presenter.component';
 import { FooterComponent } from './first-proj-mod/footer.component';
+import { MoreOnComponent } from './more-on/more-on.component';
+import { NgContentComponent } from './more-on/ng-content.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { FooterComponent } from './first-proj-mod/footer.component';
     FirstProjModComponent,
     VehicleSelectionComponent,
     ImagePresenterComponent,
-    FooterComponent
+    FooterComponent,
+    MoreOnComponent,
+    NgContentComponent
   ],
   imports: [
     BrowserModule,
