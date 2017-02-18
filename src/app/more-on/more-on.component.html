@@ -6,7 +6,7 @@
 <div>
   <app-ng-content>
     <div>
-      <label>Android </label><input type="text">
+      <label>Android </label><input type="text" value = "Okay" #tm> 
     </div>
   </app-ng-content>
 </div>
@@ -20,5 +20,5 @@
 <div>
   <h1>Local References</h1>
   <hr>
-  <input type="text" #mCity [value]="city"> <input class="btn btn-primary" type="button" value="Uppecase" (click)="makeUpper(mCity.value)">
+  <input type="text" #mCity [value]="city" [(ngModel)]="anyName"> <input class="btn btn-primary" type="button" value="Uppecase" (click)="makeUpper(mCity.value)">
 </div>

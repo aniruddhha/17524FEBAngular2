@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ContentChild,
+  ElementRef
+} from '@angular/core';
 
 @Component({
   selector: 'app-ng-content',
@@ -7,9 +12,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgContentComponent implements OnInit {
 
-  constructor() { }
+  @ContentChild('tm')
+  tm: ElementRef;
 
-  ngOnInit() {
+  constructor() { 
+    this.tm.nativeElement.value = 'Okay';
   }
 
+  ngOnInit() {
+    console.log(this.tm);
+  }
 }

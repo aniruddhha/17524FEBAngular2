@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { LoginComponent } from './../login/login.component';
+import {
+  Component,
+  OnInit,
+  ElementRef,
+  ViewChild
+} from '@angular/core';
 
 @Component({
   selector: 'app-more-on',
@@ -7,6 +13,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoreOnComponent implements OnInit {
 
+  @ViewChild('mCity')
+  mCity: ElementRef;
+
   city: string;
   constructor() { }
 
@@ -14,6 +23,8 @@ export class MoreOnComponent implements OnInit {
   }
 
   makeUpper(city: string) {
+    console.log(this.mCity);
+
     this.city = city.toUpperCase();
   }
 
