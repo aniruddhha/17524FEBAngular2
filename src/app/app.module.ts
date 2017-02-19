@@ -19,6 +19,8 @@ import { FooterComponent } from './first-proj-mod/footer.component';
 import { MoreOnComponent } from './more-on/more-on.component';
 import { NgContentComponent } from './more-on/ng-content.component';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { SizerDirective } from './directives/sizer.directive';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { LifeCycleComponent } from './life-cycle/life-cycle.component';
     FooterComponent,
     MoreOnComponent,
     NgContentComponent,
-    LifeCycleComponent
+    LifeCycleComponent,
+    DirectivesComponent,
+    SizerDirective
   ],
   imports: [
     BrowserModule,
