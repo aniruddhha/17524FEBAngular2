@@ -18,6 +18,7 @@ import { ImagePresenterComponent } from './first-proj-mod/image-presenter.compon
 import { FooterComponent } from './first-proj-mod/footer.component';
 import { MoreOnComponent } from './more-on/more-on.component';
 import { NgContentComponent } from './more-on/ng-content.component';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { NgContentComponent } from './more-on/ng-content.component';
     ImagePresenterComponent,
     FooterComponent,
     MoreOnComponent,
-    NgContentComponent
+    NgContentComponent,
+    LifeCycleComponent
   ],
   imports: [
     BrowserModule,

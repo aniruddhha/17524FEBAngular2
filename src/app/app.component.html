@@ -1,7 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-     <app-more-on></app-more-on>
+      <app-life-cycle [myName]="title" *ngIf="isShown"></app-life-cycle>
     </div>
+  </div>
+
+  <div>
+    <input type="button" value="Change" (click)="isShown = !isShown" />
   </div>
 </div>
