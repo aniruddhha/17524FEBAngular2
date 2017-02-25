@@ -21,6 +21,8 @@ import { NgContentComponent } from './more-on/ng-content.component';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { SizerDirective } from './directives/sizer.directive';
+import { SecondProjModComponent } from './second-proj-mod/second-proj-mod.component';
+import { DropdownDirective } from './second-proj-mod/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { SizerDirective } from './directives/sizer.directive';
     NgContentComponent,
     LifeCycleComponent,
     DirectivesComponent,
-    SizerDirective
+    SizerDirective,
+    SecondProjModComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
