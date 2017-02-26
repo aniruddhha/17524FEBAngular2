@@ -1,3 +1,4 @@
+import { ProducerService } from './services/producer.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -24,6 +25,7 @@ import { SizerDirective } from './directives/sizer.directive';
 import { SecondProjModComponent } from './second-proj-mod/second-proj-mod.component';
 import { DropdownDirective } from './second-proj-mod/dropdown.directive';
 import { MyifDirective } from './directives/myif.directive';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
@@ -47,14 +49,15 @@ import { MyifDirective } from './directives/myif.directive';
     SizerDirective,
     SecondProjModComponent,
     DropdownDirective,
-    MyifDirective
+    MyifDirective,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ProducerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
