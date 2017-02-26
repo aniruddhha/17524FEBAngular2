@@ -76,3 +76,15 @@
     </template>
   </div>
 </div>
+
+<div>
+  <h3> Custom Structural Directive</h3>
+  <div>
+    <template [myIf]="true">
+        <div> Okay, this is how Structural directive works</div>
+    </template>
+  </div>
+  <div *myIf="true">
+    Okay, this is how Structural directive works
+  </div>
+</div>

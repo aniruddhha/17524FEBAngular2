@@ -23,6 +23,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { SizerDirective } from './directives/sizer.directive';
 import { SecondProjModComponent } from './second-proj-mod/second-proj-mod.component';
 import { DropdownDirective } from './second-proj-mod/dropdown.directive';
+import { MyifDirective } from './directives/myif.directive';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { DropdownDirective } from './second-proj-mod/dropdown.directive';
     DirectivesComponent,
     SizerDirective,
     SecondProjModComponent,
-    DropdownDirective
+    DropdownDirective,
+    MyifDirective
   ],
   imports: [
     BrowserModule,
