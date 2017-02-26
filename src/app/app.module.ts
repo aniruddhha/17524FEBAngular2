@@ -1,3 +1,5 @@
+import { InstaService } from './services/insta.service';
+import { FbService } from './services/fb.service';
 import { ProducerService } from './services/producer.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -26,6 +28,7 @@ import { SecondProjModComponent } from './second-proj-mod/second-proj-mod.compon
 import { DropdownDirective } from './second-proj-mod/dropdown.directive';
 import { MyifDirective } from './directives/myif.directive';
 import { ServicesComponent } from './services/services.component';
+import { ChildComponent } from './services/child.component';
 
 @NgModule({
   declarations: [
@@ -50,14 +53,15 @@ import { ServicesComponent } from './services/services.component';
     SecondProjModComponent,
     DropdownDirective,
     MyifDirective,
-    ServicesComponent
+    ServicesComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [ProducerService],
+  providers: [ProducerService, FbService, InstaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
