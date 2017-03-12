@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NgForm} from '@angular/forms'
+import { NgForm } from '@angular/forms'
 
 @Component({
   selector: 'app-template-driven',
@@ -8,13 +8,20 @@ import {NgForm} from '@angular/forms'
 })
 export class TemplateDrivenComponent implements OnInit {
 
+  isPassword : boolean;
+  
+  myForm : any = {
+    userName : 'ani',
+    email : 'ani@codekul.com',
+    password : 'qeq34'
+  };
   constructor() { }
 
   ngOnInit() {
   }
 
-  onSubmit( form : NgForm) {
+  onSubmit(form: NgForm) {
     //console.log(form);
-    console.log(form.value);
+    console.log(form);
   }
 }

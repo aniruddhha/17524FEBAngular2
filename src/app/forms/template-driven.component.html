@@ -11,10 +11,10 @@
         <input 
           type="text" 
           id="username" 
-          name="username" 
-          placeholder="" 
+          name="userName"
+          required 
           class="input-xlarge"
-          ngModel>
+          [(ngModel)]="myForm.userName">
         <p class="help-block">Username can contain any letters or numbers, without spaces</p>
       </div>
     </div>
@@ -27,11 +27,13 @@
           type="text" 
           id="email" 
           name="email" 
-          placeholder="" 
+          required
+          pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
           class="input-xlarge"
-          ngModel>
+          [(ngModel)]="myForm.email"
+          #email="ngModel">
 
-        <p class="help-block">Please provide your E-mail</p>
+        <p class="help-block" *ngIf="!email.valid">Put Email</p>
       </div>
     </div>
  
@@ -43,17 +45,34 @@
           type="password" 
           id="password" 
           name="password" 
-          placeholder="" 
+          required 
           class="input-xlarge"
-          ngModel>
+          [(ngModel)]="myForm.password">
         <p class="help-block">Password should be at least 4 characters</p>
+      </div>
+    </div>
+
+    <div>
+      <!-- Password-->
+      <label class="control-label" for="password">Password</label>
+      <div class="controls">
+        <input 
+          type="password" 
+          id="confirmPassword" 
+          name="password" 
+          required 
+          class="input-xlarge"
+          #confirm
+          (blur)="isPassword = (confirm.value === myForm.password)">
+        <p class="help-block" *ngIf="!isPassword">Password dosent match</p>
       </div>
     </div>
  
     <div class="control-group">
       <!-- Button -->
+      {{isPassword}}
       <div class="controls">
-        <input type="submit" class="btn btn-success" value="Regsiter">
+        <input type="submit" class="btn btn-success" value="Regsiter" [disabled]="!form.valid || !isPassword">
       </div>
     </div>
   </fieldset>
