@@ -33,4 +33,24 @@
       Custom {{money | custom:"12":"45"}}
     </div>
   </div>
+
+<div class="row">
+    <div class="col-md-3">
+     <input type="text" #os>
+    </div>
+    <div class="col-md-9">
+      <input type="button" class="btn btn-primary" (click)="addOs(os.value)" value="Add"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+     
+    </div>
+    <div class="col-md-9">
+      <ul>
+        <li *ngFor="let mobile of mobiles | filter">{{mobile}}</li>
+      </ul>
+    </div>
+  </div>
+
 </div>

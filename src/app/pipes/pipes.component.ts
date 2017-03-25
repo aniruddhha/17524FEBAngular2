@@ -11,8 +11,20 @@ export class PipesComponent implements OnInit {
   dateTime = new Date();
   money = 500;
 
+  mobiles = [
+    'Android',
+    'apple',
+    'windows',
+    'symbian',
+    'alpha'
+  ];
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  addOs(os : string) {
+    this.mobiles.push(os);
   }
 }
