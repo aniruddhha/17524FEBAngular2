@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Pipes</h1>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      Uppercase : {{osName | uppercase}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      Datetime {{dateTime | date:"dd-MM-yyyy"}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      Chaining {{osName | slice:"1":"3" | uppercase}}
+    </div>
+  </div>
+
+   <div class="row">
+    <div class="col-md-12">
+      Currency {{money | currency:"INR"}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      Custom {{money | custom:"12":"45"}}
+    </div>
+  </div>
+</div>

@@ -32,6 +32,8 @@ import { ChildComponent } from './services/child.component';
 import { FormsComponent } from './forms/forms.component';
 import { DataDrivenComponent } from './forms/data-driven.component';
 import { TemplateDrivenComponent } from './forms/template-driven.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { CutomPipe } from './pipes/cutom.pipe';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import { TemplateDrivenComponent } from './forms/template-driven.component';
     ChildComponent,
     FormsComponent,
     DataDrivenComponent,
-    TemplateDrivenComponent
+    TemplateDrivenComponent,
+    PipesComponent,
+    CutomPipe
   ],
   imports: [
     BrowserModule,
