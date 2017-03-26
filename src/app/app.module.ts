@@ -1,3 +1,4 @@
+import { HttpService } from './http/http.service';
 import { HttpComponent } from './http/http.component';
 import { InstaService } from './services/insta.service';
 import { FbService } from './services/fb.service';
@@ -78,7 +79,7 @@ import { AsyncPipe } from './pipes/async.pipe';
     HttpModule,
     ReactiveFormsModule
   ],
-  providers: [ProducerService, FbService, InstaService],
+  providers: [ProducerService, FbService, InstaService, HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
