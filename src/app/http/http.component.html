@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      Name <input type="text" #userName/>
+    </div>
+    <div class="col-md-5">
+      Mobile <input type="text" #mobile/>
+    </div>
+    <div class="col-md-2">
+      <input type="button" value="Okay" class="btn btn-primary" (click)="addNewUser(userName.value, mobile.value)"/>
+    </div>
+  </div>
+</div>

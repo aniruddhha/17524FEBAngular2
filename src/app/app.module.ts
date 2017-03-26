@@ -1,3 +1,4 @@
+import { HttpComponent } from './http/http.component';
 import { InstaService } from './services/insta.service';
 import { FbService } from './services/fb.service';
 import { ProducerService } from './services/producer.service';
@@ -68,7 +69,8 @@ import { AsyncPipe } from './pipes/async.pipe';
     PipesComponent,
     CutomPipe,
     FilterPipe,
-    AsyncPipe
+    AsyncPipe,
+    HttpComponent
   ],
   imports: [
     BrowserModule,
