@@ -35,6 +35,7 @@ import { TemplateDrivenComponent } from './forms/template-driven.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { CutomPipe } from './pipes/cutom.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
+import { AsyncPipe } from './pipes/async.pipe';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     TemplateDrivenComponent,
     PipesComponent,
     CutomPipe,
-    FilterPipe
+    FilterPipe,
+    AsyncPipe
   ],
   imports: [
     BrowserModule,

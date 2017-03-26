@@ -19,12 +19,22 @@ export class PipesComponent implements OnInit {
     'alpha'
   ];
 
-  constructor() { }
+  asyncData: Promise<string>;
+
+  constructor() {
+    this.asyncData = new Promise<string>((res, rej) => {
+      setTimeout(data => {
+        console.log('called');
+        res('data');
+      }, 1500);
+    });
+   }
 
   ngOnInit() {
+    
   }
 
-  addOs(os : string) {
+  addOs(os: string) {
     this.mobiles.push(os);
   }
 }
