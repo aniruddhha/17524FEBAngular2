@@ -2,33 +2,36 @@ import { User } from './user';
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http'
 import 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable'
 
 @Injectable()
 export class HttpService {
+  globalHandler = err => Observable.throw(err)
   constructor(private http: Http) {
-
   }
-
   saveUser(user: User) {
     return this.http.post('https://digital-shelter-153912.firebaseio.com/cust.json', user)
-      .map(res => res.json());
+      .map(res => res.json())
+      .catch(this.globalHandler);
   }
 
   oneUser(id: string) {
     return this.http.get('https://digital-shelter-153912.firebaseio.com/cust/' + id + '.json')
-      .map(res => res.json());
+      .map(res => res.json())
+      .catch(this.globalHandler);
   }
 
   searchByUserName(userName: string) {
     return this.http.get('https://digital-shelter-153912.firebaseio.com/cust.json')
-      .map(res => res.json());
+      .map(res => res.json())
+      .catch(this.globalHandler);
   }
 
   putEx() {
-    return this.http.put('https://digital-shelter-153912.firebaseio.com/cust/-Kg9NMjRe_c90Gftsf8l.json', { userName: 'microsoft', mobile: '975112', add: 'pune' });
+    return this.http.put('https://digital-shelter-153912.firebaseio.com/cust/-Kg9NMjRe_c90Gftsf8l.json', { userName: 'microsoft', mobile: '975112', add: 'pune' }).catch(this.globalHandler)
   }
 
   deleteByKey() {
-    return this.http.delete('https://digital-shelter-153912.firebaseio.com/cust/-Kg9OS-jNfEQJLRulhas.json');
+    return this.http.delete('https://digital-shelter-153912.firebaseio.com/cust/-Kg9OS-jNfEQJLRulhas.json').catch(this.globalHandler)
   }
 }

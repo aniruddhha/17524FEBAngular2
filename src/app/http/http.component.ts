@@ -1,3 +1,4 @@
+import { LoginComponent } from './../login/login.component';
 import { User } from './user';
 import { HttpService } from './http.service';
 import { Component, OnInit } from '@angular/core';
@@ -10,6 +11,12 @@ import { Component, OnInit } from '@angular/core';
 export class HttpComponent implements OnInit {
 
   user: User;
+  errMsg : string;
+
+  handler = err => {
+    console.log(`Error is ${err}`);
+    this.errMsg = 'need argument ';
+  };
 
   constructor(
     private http: HttpService
@@ -20,7 +27,7 @@ export class HttpComponent implements OnInit {
   ngOnInit() {
 
     this.putEx();
-    this.http.deleteByKey().subscribe(res => console.log(res));
+    this.http.deleteByKey().subscribe(res => console.log(res), this.handler);
   }
 
   addNewUser(userName: string, mobile: string) {
@@ -33,7 +40,7 @@ export class HttpComponent implements OnInit {
   search(id: string) {
     this.http.oneUser(id).subscribe(res => {
       this.user = res;
-    });
+    },this.handler);
   }
 
   searchByUserName(userName: string) {
@@ -41,10 +48,12 @@ export class HttpComponent implements OnInit {
       for (let us in res) {
         console.log(res[us]['userName'] === userName);
       }
-    });
+    }, this.handler);
   }
 
   putEx() {
     this.http.putEx().subscribe(res => console.log(res));
   }
 }
+
+
